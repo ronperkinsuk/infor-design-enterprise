@@ -118,7 +118,7 @@ div.multiselect {
     height: 16px;
     left: 14px;
     position: absolute;
-    top: 9px;
+    top: 11px;
     vertical-align: middle;
     width: 16px;
 
@@ -207,7 +207,7 @@ div.multiselect {
 .dropdown-list {
   @include unselectable();
 
-  background-color: transparent;
+  background-color: inherit;
   border: 1px solid $dropdown-menu-border-color;
   border-radius: 3px;
   box-shadow: $dropdown-box-shadow-top, $focus-box-shadow;
@@ -240,6 +240,14 @@ div.multiselect {
 
   &.is-ontop {
     box-shadow: $dropdown-box-shadow-top;
+  }
+
+  &.ffdropdown {
+    > .trigger {
+      .icon {
+        left: 0;
+      }
+    }
   }
 
   ul {
